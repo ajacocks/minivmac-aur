@@ -3,7 +3,7 @@
 .SH NAME
 minivmac \- The Mini vMac emulator collection allows modern computers to run software made for early Macintosh computers, the computers that Apple sold from 1984 to 1996 based upon Motorola's 680x0 microprocessors. Mini vMac is part of the Gryphel Project.
 .SH SYNOPSIS
-minivmac [{disk_image_path}...] [-d {directory_path}] [-display|--display {display_name}] [-n {app_name}] [-r|--rom {rom_file_path}]
+minivmac [\fIdisk_image_path...\fR] [-d \fIdirectory_path\fR] [-display|--display \fIdisplay_name\fR] [-n \fIapp_name\fR] [-r|--rom \fIrom_file_path\fR]
 .SH DESCRIPTION
 The Mini vMac emulator collection allows modern computers to run software made for early Macintosh computers, the computers that Apple sold from 1984 to 1996 based upon Motorola's 680x0 microprocessors. The first member of this collection emulates the Macintosh Plus.
 
@@ -16,9 +16,7 @@ Mini vMac requires a ROM image file to run, and so can be legally used only by t
 Mini vMac is part of the Gryphel Project, about helping to preserve software made for early Macintosh computers. Another component of the Gryphel Project is a list of Alternatives to Mini vMac.
 .SH OPTIONS
 .TP
-minivmac [{disk_image_path}...] [-d {directory_path}] [-display|--display {display_name}] [-n {app_name}] [-r|--rom {rom_file_path}]
-.TP
-.B {disk_image_path}...
+.B \fIdisk_image_path...\fR
 If there are any arguments that don't begin with ‘-’, Mini vMac will try to mount them as disk image files. See the “Floppy Drive” section of the Hardware Reference.
 .TP
 .B -d \fIdirectory_path\fR
