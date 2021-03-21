@@ -78,10 +78,12 @@ EOF
   done
   # set minimac to default to Macintosh Plus emulation
   ln -s "$pkgdir"/usr/bin/$pkgname-Plus-bin "$pkgdir"/usr/bin/$pkgname-bin
-  # create a ROM storage directory
-  install -dm755 "$pkgdir"/usr/share/$pkgname/roms
   # create a disk storage directory
   install -dm755 "$pkgdir"/usr/share/$pkgname/disks
+  # install man page
+  install -Dm755 minivmac.man "$pkgdir"/usr/share/man/man1/minivmac.1
+  # create a ROM storage directory
+  install -dm755 "$pkgdir"/usr/share/$pkgname/roms
   # Extras
   ########
   # install blank disks

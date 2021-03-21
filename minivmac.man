@@ -14,7 +14,6 @@ The “Mini” in the name now means that each emulator in the collection is as 
 Mini vMac requires a ROM image file to run, and so can be legally used only by those who own a 680x0 based Macintosh. This leads to the question, if you need to own the real computer to use it, what is the use of the emulator? First, a real Macintosh won’t last forever. It is common for the power supply to fail. It is still legal to use the emulation after the real computer breaks. And second, the emulation is more convenient than the real thing. It is much faster (on modern computers) and you can use a better screen, keyboard, and mouse. And it is easier to transfer files between the modern computer and the emulator.
 
 Mini vMac is part of the Gryphel Project, about helping to preserve software made for early Macintosh computers. Another component of the Gryphel Project is a list of Alternatives to Mini vMac.
-PCem (short for PC Emulator) is an IBM PC emulator for Windows and Linux that specializes in running old operating systems and software that are designed for IBM PC compatibles. Originally developed as an IBM PC XT emulator, it later emulates other IBM PC compatible computers as well. (from wikipedia)
 .SH OPTIONS
 .TP
 minivmac [{disk_image_path}...] [-d {directory_path}] [-display|--display {display_name}] [-n {app_name}] [-r|--rom {rom_file_path}]
