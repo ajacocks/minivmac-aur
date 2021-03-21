@@ -21,6 +21,7 @@ source=(${pkgname}-${pkgver}.tgz::"${_url_d}/${pkgname}-${pkgver}/$pkgname-$pkgv
         exportfl-1.3.1.zip::"${_url_d}/extras/exportfl/exportfl-1.3.1.zip"
         exportps-1.0.0.zip::"${_url_d}/extras/exportps/exportps-1.0.0.zip" 
         minivmac.man::"https://raw.githubusercontent.com/ajacocks/minivmac-aur/main/minivmac.man"
+        minivmac.sh::"https://raw.githubusercontent.com/ajacocks/minivmac-aur/main/minivmac.sh"
         importfl-1.2.2.zip::"${_url_d}/extras/importfl/importfl-1.2.2.zip")
 sha256sums=('9b7343cec87723177a203e69ad3baf20f49b4e8f03619e366c4bf2705167dfa4'
             '3c3040148c0e128a8402ac0fa3494098b0dee7df7bd06b26e9196c5dd1addff3'
@@ -30,6 +31,7 @@ sha256sums=('9b7343cec87723177a203e69ad3baf20f49b4e8f03619e366c4bf2705167dfa4'
             'aa263b994e15eea8ccbef05c04d40ad6a968f68a87a6a496d00671e75937a17e'
             '633a531500854af6e899ab6501fdf6b0060f6100bba726421aa6f37a860f6f7b'
             'f3d913c3a039f394c04c255f100f91541b4885f7f48d87c0373356806027dca3'
+            '616becb7fc17719d6d0d43965014b92793be6bdb821e1e0def56d7cb033acd9b'
             'bd6e70489d9bac12d9012634f4f5ae51f30a2c5d647fe3b2b071ff1b5a649419')
 # Models that minivmac supports
 #-m 128K { Macintosh 128K }
@@ -56,17 +58,8 @@ package() {
   install -dm755 "$pkgdir"/usr/share/doc/$pkgname
   install -m0644 ${pkgname}/COPYING.txt "$pkgdir"/usr/share/doc/$pkgname/COPYING.txt
   install -m0644 ${pkgname}/README.txt "$pkgdir"/usr/share/doc/$pkgname/README.txt
-  # create a launcher script
-  install -dm755 "$pkgdir"/usr/bin
-  cat <<EOF > "$pkgdir"/usr/bin/$pkgname
-#!/bin/sh
-if [ -x "\$0-bin" -a -d /usr/share/minivmac/roms ]; then
-  "\$0-bin" -d /usr/share/minivmac/roms
-else
-  echo "Failed to find executable '\$0-bin' or directory '/usr/share/minivmac/roms'."
-  exit 1
-fi
-EOF
+  # install launcher script
+  install -Dm755 $pkgname.sh "$pkgdir"/usr/bin/$pkgname
   chmod 0755 "$pkgdir"/usr/bin/$pkgname
   # install all model-specific executables
   for _model in ${_models}; do
