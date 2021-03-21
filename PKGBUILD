@@ -12,7 +12,7 @@ url="https://www.gryphel.com/c/minivmac/"
 _url_d="https://www.gryphel.com/d/minivmac"
 _models="128K 512Ke Plus SE Classic SEFDHD II"
 license=('GPL2')
-depends=('libx11')
+depends=('bash' 'libx11')
 source=(${pkgname}-${pkgver}.tgz::"${_url_d}/${pkgname}-${pkgver}/$pkgname-$pkgver.src.tgz"
         blanks-1.1.zip::"${_url_d}/extras/blanks/blanks-1.1.zip"
         clipin-1.1.0.zip::"${_url_d}/extras/clipin/clipin-1.1.0.zip"
@@ -70,7 +70,7 @@ package() {
     cd ..
   done
   # set minimac to default to Macintosh Plus emulation
-  ln -s "$pkgdir"/usr/bin/$pkgname-Plus-bin "$pkgdir"/usr/bin/$pkgname-bin
+  ln -s /usr/bin/$pkgname-Plus-bin "$pkgdir"/usr/bin/$pkgname-bin
   # create a disk storage directory
   install -dm755 "$pkgdir"/usr/share/$pkgname/disks
   # install man page
