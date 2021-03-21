@@ -1,0 +1,40 @@
+.\" Manpage for minivmac
+.TH man 1 "Sat Mar 20 2021" "36.04" "minivmac man page"
+.SH NAME
+minivmac \- The Mini vMac emulator collection allows modern computers to run software made for early Macintosh computers, the computers that Apple sold from 1984 to 1996 based upon Motorola's 680x0 microprocessors. Mini vMac is part of the Gryphel Project.
+.SH SYNOPSIS
+minivmac [{disk_image_path}...] [-d {directory_path}] [-display|--display {display_name}] [-n {app_name}] [-r|--rom {rom_file_path}]
+.SH DESCRIPTION
+The Mini vMac emulator collection allows modern computers to run software made for early Macintosh computers, the computers that Apple sold from 1984 to 1996 based upon Motorola's 680x0 microprocessors. The first member of this collection emulates the Macintosh Plus.
+
+Mini vMac began in 2001 as a spin off of the program vMac. It was originally intended to be of limited interest, a simpler version to serve as a programmers introduction to vMac. But vMac hasn’t been updated in many years, so Mini vMac may now be considered its continuation.
+
+The “Mini” in the name now means that each emulator in the collection is as small and simple as possible. The meta program and data that generate the emulators (the Mini vMac build system) are rather bigger. Besides the Macintosh Plus, there are also emulations of the Macintosh 128K, 512K, 512Ke, SE, Classic, and SE FDHD. Work is in progress on Macintosh II emulation. There are also numerous other options.
+
+Mini vMac requires a ROM image file to run, and so can be legally used only by those who own a 680x0 based Macintosh. This leads to the question, if you need to own the real computer to use it, what is the use of the emulator? First, a real Macintosh won’t last forever. It is common for the power supply to fail. It is still legal to use the emulation after the real computer breaks. And second, the emulation is more convenient than the real thing. It is much faster (on modern computers) and you can use a better screen, keyboard, and mouse. And it is easier to transfer files between the modern computer and the emulator.
+
+Mini vMac is part of the Gryphel Project, about helping to preserve software made for early Macintosh computers. Another component of the Gryphel Project is a list of Alternatives to Mini vMac.
+PCem (short for PC Emulator) is an IBM PC emulator for Windows and Linux that specializes in running old operating systems and software that are designed for IBM PC compatibles. Originally developed as an IBM PC XT emulator, it later emulates other IBM PC compatible computers as well. (from wikipedia)
+.SH OPTIONS
+.TP
+minivmac [{disk_image_path}...] [-d {directory_path}] [-display|--display {display_name}] [-n {app_name}] [-r|--rom {rom_file_path}]
+.TP
+.B {disk_image_path}...
+If there are any arguments that don't begin with ‘-’, Mini vMac will try to mount them as disk image files. See the “Floppy Drive” section of the Hardware Reference.
+.TP
+.B -d \fIdirectory_path\fR
+Mini vMac will use \fIdirectory_path\fR instead of the directory containing the application when looking for things such as the ROM or disk images named disk1.dsk, disk2.dsk and so on. (See the “ROM” and “Floppy Drive” sections of the Hardware Reference.)
+.TP
+.B -display|--display \fIdisplay_name\fR
+XOpenDisplay will be called with \fIdisplay_name\fR as the argument. See the “Screen” section of the Hardware Reference.
+.TP
+.B -n \fIapp_name\fR
+Mini vMac will use \fIapp_name\fR instead of the name of the application file for things such as the title of the Mini vMac window. See the “ROM” section of the Hardware Reference.
+.TP
+.B -r|--rom \fIrom_file_path\fR
+Mini vMac will try to load the ROM file from \fIrom_file_path\fR See the “ROM” section of the Hardware Reference.
+.RE
+.SH BUGS
+Mini vMac is extensively modified from vMac, so I should take blame for any bugs I’ve introduced. 
+.SH AUTHOR
+copyright (c) 2017 Paul C. Pratt
