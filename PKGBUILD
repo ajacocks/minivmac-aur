@@ -1,5 +1,5 @@
 # Maintainer: Alexander Jacocks <alexander@redhat.com>
-# Original maintainer: LIN Ruohshoei <lin dot ruohshoei plus archlinux at gmail dot com>
+# Contributor: LIN Ruohshoei <lin dot ruohshoei plus archlinux at gmail dot com>
 # Contributor: Eric DeStefano <eric at ericdestefano dot com>
 # Contributor: Iñigo Alvarez <alvarezviu@gmail.com>
 # Contributor: William Termini <aur@termini.me>
