@@ -24,8 +24,8 @@ source=(${pkgname}-${pkgver}.tgz::"${_url_d}/${_upstream_pkgname}-${pkgver}/$_up
         dafkey-1.1.0b.zip::"${_url_d}/extras/dafkey/dafkey-1.0.0b.zip"
         exportfl-1.3.1.zip::"${_url_d}/extras/exportfl/exportfl-1.3.1.zip"
         exportps-1.0.0.zip::"${_url_d}/extras/exportps/exportps-1.0.0.zip" 
-        minivmac.man::"https://raw.githubusercontent.com/ajacocks/minivmac-aur/main/minivmac.man"
-        minivmac.sh::"https://raw.githubusercontent.com/ajacocks/minivmac-aur/main/minivmac.sh"
+        minivmac.man::"https://raw.githubusercontent.com/ajacocks/minivmac-aur/beta/minivmac.man"
+        minivmac.sh::"https://raw.githubusercontent.com/ajacocks/minivmac-aur/beta/minivmac.sh"
         importfl-1.2.2.zip::"${_url_d}/extras/importfl/importfl-1.2.2.zip")
 sha256sums=('5f840fa5943dae6dcb6c0d81d1d78381795b89de1efea33e9d819d0a676d1ac7'
             '3c3040148c0e128a8402ac0fa3494098b0dee7df7bd06b26e9196c5dd1addff3'
